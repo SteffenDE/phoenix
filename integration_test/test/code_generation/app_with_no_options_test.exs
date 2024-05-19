@@ -64,7 +64,8 @@ defmodule Phoenix.Integration.CodeGeneration.AppWithNoOptionsTest do
           "mix",
           "phx.server"
         ],
-        cd: app_root_path
+        cd: app_root_path,
+        stderr_to_stdout: true, into: IO.binstream(:stdio, :line)
       )
   end
 
